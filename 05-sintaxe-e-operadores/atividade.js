@@ -1,6 +1,6 @@
 function makeFirstMessage(num1, num2) {
   const saoIguais = num1 === num2 ? "são iguais" : "não são iguais";
-  
+
   return `Os números ${num1} e ${num2} ${saoIguais}.`
 }
 
@@ -13,6 +13,9 @@ function makeSecondMessage(num1, num2) {
 }
 
 const verificaNumeros = (num1, num2) => {
+  if (num1 === undefined || num2 === undefined)
+    return "";
+
   const firstMessage = makeFirstMessage(num1, num2);
   const secondMessage = makeSecondMessage(num1, num2);
 
