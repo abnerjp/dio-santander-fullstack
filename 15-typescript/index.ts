@@ -1,8 +1,16 @@
-// Generic types
-
-function adicionaApendiceALista<T>(array: T[], valor: T) {
-  return array.map(() => valor);
+interface IUsuario {
+  id: string;
+  email: string,
 }
 
+interface IAdmin extends IUsuario {
+  cargo: "gerente" | "coordenador" | "supervisor";
+}
 
-adicionaApendiceALista([1, 2, 3], 4);
+function redirecione (usuario: IUsuario | IAdmin) {
+  if ('cargo' in usuario) {
+    // redirecionar para a área de administracao
+  }
+  
+  // redirecionar para a área de usuário
+}
