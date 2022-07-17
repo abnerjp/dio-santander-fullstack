@@ -1,25 +1,27 @@
 // types
 // interfaces
 
+
+
 interface IAnimal {
   nome: string;
   tipo: "terrestre" | "aquático";
-  executarSom(alturaEmDecibeis: number): void;
+  domestico: boolean;
 }
 
 interface IFelino extends IAnimal {
   visaoNoturna: boolean;
 }
 
-const animal : IAnimal = {
-  nome: "Elefante",
-  tipo: "terrestre",
-  executarSom: (alturaEmDecibeis) => console.log(`${alturaEmDecibeis}dB`)
+interface ICanino extends IAnimal {
+  porte: "pequeno" | "medio" | "grande";
 }
 
-const felino: IFelino = {
-  nome: "Leão",
+type IDomestico = IFelino | ICanino;
+
+const animal : IDomestico = {
+  domestico: true,
+  nome: "cachorro",
+  porte: "medio",
   tipo: "terrestre",
-  visaoNoturna: true,
-  executarSom: (alturaEmDecibeis) => console.log(`${alturaEmDecibeis}dB`)
 }
