@@ -1,10 +1,13 @@
-import $ from 'jquery';
+// import $ from 'jquery';
 
-$.fn.extend({
-  novaFuncao() {
-    console.log("chamou nova funcao")
-  }
-});
+// $.fn.extend({
+//   novaFuncao() {
+//     console.log("chamou nova funcao")
+//   }
+// });
 
 
-$("body").novaFuncao()
+// $("body").novaFuncao()
+
+
+export const numero = 2;
