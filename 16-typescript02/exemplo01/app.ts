@@ -1,13 +1,5 @@
-type input = number | string;
-
-function somarValores(input1: input, input2: input) {
-  if (typeof input1 === "string" || typeof input2 === "string") {
-    return input1.toString() + input2.toString();
-  }
-
-  return input1 + input2;
+function somarValoresNumericos(numero1: number, numero2: number): number {
+  return numero1 + numero2;
 }
 
-console.log(somarValores(1, 3));
-console.log(somarValores("Olá, ", "tudo bem?"));
-console.log(somarValores("str1", 3));
+console.log(somarValoresNumericos(1, 2));
