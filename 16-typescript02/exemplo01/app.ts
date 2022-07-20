@@ -16,3 +16,10 @@ let stringTeste2: string;
 if (typeof unknownValor == "string") {
   stringTeste2 = unknownValor;
 }
+
+function jogaErro(erro: string, codigo: number): never {
+  throw {error: erro, code: codigo}
+  
+}
+
+jogaErro("deu erro", 500);
