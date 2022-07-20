@@ -1,13 +1,15 @@
 "use strict";
-function somarValoresNumericosCallback(numero1, numero2, callback) {
-    let resultado = numero1 + numero2;
-    return callback(resultado);
+let anyEstaDeVolta;
+anyEstaDeVolta = 2;
+anyEstaDeVolta = "asd";
+anyEstaDeVolta = true;
+let stringTeste;
+stringTeste = anyEstaDeVolta;
+let unknownValor;
+unknownValor = 3;
+unknownValor = "asdsa";
+unknownValor = true;
+let stringTeste2;
+if (typeof unknownValor == "string") {
+    stringTeste2 = unknownValor;
 }
-function aoQuadrado(numero) {
-    return numero * numero;
-}
-function dividirPorEleMesmo(numero) {
-    return numero / numero;
-}
-console.log(somarValoresNumericosCallback(1, 3, aoQuadrado));
-console.log(somarValoresNumericosCallback(1, 3, dividirPorEleMesmo));

@@ -1,17 +1,18 @@
+let anyEstaDeVolta: any;
+anyEstaDeVolta = 2;
+anyEstaDeVolta = "asd";
+anyEstaDeVolta = true;
 
-function somarValoresNumericosCallback(numero1: number, numero2: number, callback: (numero: number) => number): number {
-  let resultado = numero1 + numero2;
+let stringTeste: string;
+stringTeste = anyEstaDeVolta;
 
-  return callback(resultado);
+
+let unknownValor: unknown;
+unknownValor = 3;
+unknownValor = "asdsa";
+unknownValor = true;
+
+let stringTeste2: string;
+if (typeof unknownValor == "string") {
+  stringTeste2 = unknownValor;
 }
-
-function aoQuadrado(numero: number): number {
-  return numero * numero;
-}
-
-function dividirPorEleMesmo(numero: number): number {
-  return numero / numero;
-}
-
-console.log(somarValoresNumericosCallback(1, 3, aoQuadrado));
-console.log(somarValoresNumericosCallback(1, 3, dividirPorEleMesmo));
